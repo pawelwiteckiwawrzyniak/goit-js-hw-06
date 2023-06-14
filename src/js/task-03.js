@@ -22,7 +22,7 @@ function addImages(images) {
   images.forEach((element) => {
     gallery.insertAdjacentHTML(
       "beforeend",
-      `<li><img src ="${element.url}" alt ="${element.alt}" width = 35%></img></li>`
+      `<li><img src ="${element.url}" alt ="${element.alt}" width = "35%"></img></li>`
     );
   });
 }
