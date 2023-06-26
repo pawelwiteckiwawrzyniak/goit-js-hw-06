@@ -3,8 +3,11 @@ console.log(`Number of categories: `, categories.length);
 
 function namesOfCategories() {
   categories.forEach((element) => {
-    console.log(`Category: `, element.firstElementChild.textContent);
-    console.log(`Elements: `, element.lastElementChild.children.length);
+    const category = element.querySelector(`h2`);
+    const elements = element.querySelectorAll(`li`);
+
+    console.log(`Category: `, category.textContent);
+    console.log(`Elements: `, elements.length);
   });
 }
 

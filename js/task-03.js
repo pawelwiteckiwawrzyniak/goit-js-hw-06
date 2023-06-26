@@ -18,13 +18,11 @@ const gallery = document.querySelector(`.gallery`);
 gallery.style.display = "flex";
 gallery.style.flexDirection = "column";
 
-function addImages(images) {
-  images.forEach((element) => {
-    gallery.insertAdjacentHTML(
-      "beforeend",
-      `<li><img src ="${element.url}" alt ="${element.alt}" width = "35%"></img></li>`
-    );
-  });
-}
+const markup = images
+  .map(
+    ({ url, alt }) =>
+      `<li><img src ="${url}" alt ="${alt}" width = "35%"></img></li>`
+  )
+  .join("");
 
-addImages(images);
+gallery.insertAdjacentHTML("beforeend", markup);

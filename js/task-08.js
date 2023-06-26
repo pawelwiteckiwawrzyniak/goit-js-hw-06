@@ -14,7 +14,7 @@ form.addEventListener("submit", (event) => {
   }
 
   const user = {
-    login: email.value,
+    email: email.value,
     password: password.value,
   };
 

@@ -8,7 +8,9 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
+console.log(getRandomHexColor());
+
 btn.addEventListener(`click`, () => {
-  body.style.backgroundColor = getRandomHexColor();
-  colorName.innerHTML = body.style.backgroundColor;
+  colorName.textContent = getRandomHexColor();
+  body.style.backgroundColor = colorName.textContent;
 });
